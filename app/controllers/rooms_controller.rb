@@ -9,6 +9,7 @@ class RoomsController < ApplicationController
     @rooms = Room.public_rooms
     @users = User.all_except(@current_user)
     @room = Room.new
+    @messages = @single_room.messages
   end
 
   def new
